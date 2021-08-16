@@ -1,0 +1,177 @@
+body{
+    font-family:"Trebuchet MS";
+    margin:0;
+    overflow:hidden;
+    background-color:#1b1b1b;
+    animation:fluid .5s 1;
+}
+
+@keyframes fluid{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    width:10px;
+    border:1px solid #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color:greenyellow;
+   border-radius:5px;
+}
+
+.loader-div{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:#1b1b1b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.loader-div .loader{
+   border:5px solid yellow;
+   border-top:5px solid transparent;
+   border-bottom:5px solid transparent;
+   width:100px;
+   height:100px;
+   border-radius:100%;
+   animation:rotate 0.5s linear infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+nav{
+    background-color:#222;
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    height:10%;
+}
+
+nav span{
+    color:white;
+    font-weight:bold;
+    display:block;
+    line-height:80px;
+    text-align:right;
+    padding:0 20px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:flex-end;
+}
+
+nav ul li{
+    list-style-type:none;
+    margin:10px;
+    /* border:1px solid yellow; */
+    padding:5px;
+    border-radius:5px;
+    cursor:pointer;
+    transition: all 0.3s;
+}
+
+nav ul li:hover{
+  
+    padding:10px;
+    background-color:yellow;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:yellow;
+}
+
+nav ul li a:hover{
+    color:black;
+}
+
+nav span button{
+    border:1px solid grey;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.app{
+    background-color:#1b1b1b;
+    position:absolute;
+    top:10%;
+    width:100%;
+    height:90%;
+}
+
+.app center h1{
+    color:yellow;
+}
+
+.app .dashboard{
+  position:relative;
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+form{
+  width:40%;
+  margin:30px auto;
+  border:1px solid #333;
+  color:white;
+  padding:20px;
+  border-radius:3px;
+}
+
+form div{
+   margin-bottom:10px;
+}
+
+form div label,form div input{
+    display:block;
+}
+
+form div label{
+  margin-bottom:7px;
+  color:lightgrey;
+}
+
+form div input{
+    width:100%;
+    padding:8px 0;
+    text-indent:5px;
+    background-color:#333;
+    border-radius:3px;
+    border:1px solid #555;
+    outline:1px solid #222;
+    color:lightgrey;
+}
+
+form div button{
+    padding:10px;
+    background-color:yellow;
+    border-radius:3px;
+    font-weight:bold;
+    border:2px solid yellow;
+}
+
+
+
+

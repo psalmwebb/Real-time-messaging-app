@@ -1,0 +1,186 @@
+
+
+@mixin fromToMessage {
+    padding:10px;
+    border-radius:10px;
+    max-width:30%;
+    word-wrap:break-word;
+    position:relative;
+}
+
+@mixin fromToMessageBefore {
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    transform:rotate(-45deg);
+    top:10px;
+    z-index:10;
+}
+
+
+.chat-space{
+    /* border:1px solid white; */
+    left:30%;
+    width:70%;
+    display:block;
+
+    .no-messages{
+        color:lightgrey;
+        font-size:40px;
+        text-align:center;
+        margin-top:100px;
+    }
+
+    .chat-area{
+        /* border:1px solid white; */
+        position:absolute;
+        width:100%;
+        height:100%;
+
+        .chat-area-nav{
+            border:1px solid #222;
+            padding:20px;
+            display:flex;
+            justify-content:space-between;
+
+            .recipient{
+                font-size:22px;
+                color:lightgrey;
+                width:100%;
+                text-align:right;
+            }
+
+            button{
+                padding:8px;
+                background-color:#222;
+                border:1px solid lightgrey;
+                color:lightgrey;
+                cursor:pointer;
+                border-radius:3px;
+            }
+        }
+
+        .send-message-div{
+            padding:10px;
+            background-color:#1b1b1b;
+            position:absolute;
+            bottom:0;
+            width:100%;
+            z-index:500;
+            /* border-top:3px solid #222; */
+
+            input{
+                width:80%;
+                padding:12px 0;
+                text-indent:20px;
+                outline:none;
+                border-radius:20px;
+                background-color:#333;
+                border:5px solid #222;
+                border-top-right-radius:0;
+                border-bottom-right-radius:0;
+                font-size:18px;
+                font-family:'trebuchet MS';
+                color:lightgrey;
+                font-weight:lighter;
+            }
+
+            button{
+                width:15%;
+                padding:14px 0;
+                border-radius:15px;
+                border-top-left-radius:0;
+                border-bottom-left-radius:0;
+                border-bottom-right-radius:0;
+                font-size:20px;
+                border:5px solid #222;
+                font-weight:bold;
+                background-color:#222;
+                color:white;
+                cursor:pointer;
+                transition:all 0.3s;
+            }
+
+            button:active{
+                transform:scale(0.90);
+            }
+            
+        }
+
+        .chats{
+            /* border:1px solid white; */
+            overflow-y:scroll;
+            overflow-x:hidden;
+            position:absolute;
+            width:100%;
+            height:80%;
+
+            .from{
+                /* border:1px solid white; */
+                display:flex;
+                justify-content:flex-end;
+                margin:10px 20px;
+
+                .message{
+                    @include fromToMessage;
+                    background-color:greenyellow;
+
+                    span{
+                        z-index:90;
+                        position:relative;
+                    }
+                  }
+
+                .message:before{
+                    @include fromToMessageBefore;
+
+                    background-color:greenyellow;
+                    right: -4px;
+                }
+                  
+             }
+
+             .to{
+                /* border:1px solid white; */
+                display:flex;
+                justify-content:flex-start;
+                margin:10px 20px;
+
+                .message{
+                    @include fromToMessage;
+                    background-color:lightgrey;
+
+                    span{
+                        z-index:10;
+                        position:relative;
+                    }
+                }
+
+                .message:before{
+                    @include fromToMessageBefore;
+                    background-color:lightgrey;
+                    left: -4px;
+                }
+            }
+
+            .typing{
+                margin:10px;
+                color:lightgrey;
+                font-style:italic;
+                font-size:18px;
+                padding:15px;
+            }
+            
+        }
+    }
+}
+
+
+
+.chat-space{
+    position:absolute;
+    top:0;
+    height:100%;
+}
+
