@@ -45,7 +45,7 @@ export default function Signup()
             </div>
 
             <div>
-                <button>Sign Up</button>
+                <button style={{'width':'100%'}}>Sign Up</button>
             </div>
         </form>
     )

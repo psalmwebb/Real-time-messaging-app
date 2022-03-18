@@ -58,8 +58,8 @@ export default function AddContact({close})
             </div>
             <div ref={errorDiv}></div>
             <div>
-               <button onClick={handleSubmit}>ADD</button>
-               <button type="button" onClick={close}>CLOSE</button>
+               <button onClick={handleSubmit} style={{'margin':'0 10px 0 0'}}>ADD</button>
+               <button type="button" onClick={close} style={{'margin':'0 10px 0 0'}}>CLOSE</button>
             </div>
         </form>
     )

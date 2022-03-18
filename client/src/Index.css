@@ -2,7 +2,9 @@ body{
     font-family:"Trebuchet MS";
     margin:0;
     overflow:hidden;
+    background-image:url(../img.jpg);
     background-color:#1b1b1b;
+    background-blend-mode:darken;
     animation:fluid .5s 1;
 }
 
@@ -172,6 +174,38 @@ form div button{
     border:2px solid yellow;
 }
 
+button{
+    cursor:pointer;
+}
+
+
+.welcome{
+  margin-top:40px;
+}
+
+.welcome .welcome-text{
+  color:yellowgreen;
+  margin:0 auto;
+  width:40%;
+  /* border:1px solid black; */
+}
+
+.welcome .welcome-text p{
+    font-size:23px;
+    color:yellowgreen;
+    text-align:center;
+}
+
+.welcome .welcome-img-div{
+  width:52%;
+  margin: 15px auto;
+  box-shadow:0px 0px 10px 0px lightgreen;
+  background-image:url(../Capture.JPG);
+  background-size:contain;
+  background-repeat:no-repeat;
+  height:400px;
+  background-position:center center;
+}
 
 
 

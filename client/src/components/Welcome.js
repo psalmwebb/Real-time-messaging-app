@@ -3,6 +3,14 @@
 export default function Welcome()
 {
     return (
-        <center><h1>Welcome to the best messaging app on the web...</h1></center>
+        <div className="welcome">
+            <div className="welcome-text">
+             <p>WELCOME TO THE BEST MESSAGING APP ON THE WEB : )</p>
+            </div>
+
+            <div className="welcome-img-div">
+
+            </div>
+        </div>
     )
 }

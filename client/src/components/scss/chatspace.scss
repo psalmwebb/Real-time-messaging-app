@@ -134,7 +134,6 @@
 
                 .message:before{
                     @include fromToMessageBefore;
-
                     background-color:greenyellow;
                     right: -4px;
                 }

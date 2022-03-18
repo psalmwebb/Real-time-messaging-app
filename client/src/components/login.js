@@ -39,7 +39,12 @@ export default function Login()
             </div>
 
             <div>
-                <button>Log In</button>
+                <button style={{'width':"100%"}}>Log In</button>
+            </div>
+
+            <div>
+                <p style={{'color':'grey','textAlign':'center'}}>Username : james</p>
+                <p style={{'color':'grey','textAlign':'center'}}>Password : james123</p>
             </div>
         </form>
     )
