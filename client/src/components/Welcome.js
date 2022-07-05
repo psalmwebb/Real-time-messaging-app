@@ -1,15 +1,22 @@
 
 
-export default function Welcome()
+export default function Welcome(props)
 {
     return (
         <div className="welcome">
-            <div className="welcome-text">
-             <p>WELCOME TO THE BEST MESSAGING APP ON THE WEB : )</p>
+            <div className="first">
+               <h1>
+                  EASILY CONVERSE WITH FRIENDS
+               </h1>
+               <div>
+                 <button onClick={()=> props.history.push('/login')}>START NOW</button>
+               </div>
             </div>
 
-            <div className="welcome-img-div">
+            <div className="second">
+               <div className="img">
 
+               </div>
             </div>
         </div>
     )

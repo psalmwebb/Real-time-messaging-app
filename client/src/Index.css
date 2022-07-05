@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima&display=swap');
+
+*{
+    font-family:'Arima', cursive,"Trebuchet MS";
+    font-size:14px;
+}
+
 body{
-    font-family:"Trebuchet MS";
     margin:0;
     overflow:hidden;
-    background-image:url(../img.jpg);
+    background-image:url(../capture2.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
     background-color:#1b1b1b;
     background-blend-mode:darken;
     animation:fluid .5s 1;
+    zoom:0.9;
 }
 
 @keyframes fluid{
@@ -61,42 +70,63 @@ body{
 }
 
 nav{
-    background-color:#222;
+    /* background-color:#222; */
     position:absolute;
     width:100%;
     top:0;
     left:0;
-    height:10%;
+    padding:0;
+    height:8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* border:1px solid white; */
 }
 
 nav span{
     color:white;
+}
+
+nav div{
+    color:yellowgreen;
+    display:flex;
+    align-items:center;
+    padding:0 40px;
+}
+
+nav div i{
+    font-size:40px;
+    margin:0 10px;
+}
+
+nav div span{
+    font-size:30px;
+    margin:0 10px;
+}
+
+nav div span::first-letter{
+    color:white;
+    font-size:40px;
     font-weight:bold;
-    display:block;
-    line-height:80px;
-    text-align:right;
-    padding:0 20px;
 }
 
 nav ul{
+    padding:0;
+    margin:0;
     display:flex;
     justify-content:flex-end;
+    align-items: center;
+    /* border:1px solid white; */
+    width:100%;
 }
 
 nav ul li{
     list-style-type:none;
-    margin:10px;
-    /* border:1px solid yellow; */
-    padding:5px;
+    padding:5px 10px;
+    margin:0 25px;
     border-radius:5px;
     cursor:pointer;
     transition: all 0.3s;
-}
-
-nav ul li:hover{
-  
-    padding:10px;
-    background-color:yellow;
 }
 
 nav ul li a{
@@ -104,9 +134,15 @@ nav ul li a{
     color:yellow;
 }
 
-nav ul li a:hover{
-    color:black;
+
+nav ul li:hover{
+   background-color:yellow;
 }
+
+nav ul li:hover a{
+    color:#1b1b1b;
+}
+
 
 nav span button{
     border:1px solid grey;
@@ -115,11 +151,11 @@ nav span button{
 }
 
 .app{
-    background-color:#1b1b1b;
+    /* background-color:#1b1b1b; */
     position:absolute;
-    top:10%;
+    top:8%;
     width:100%;
-    height:90%;
+    height:92%;
 }
 
 .app center h1{
@@ -129,6 +165,7 @@ nav span button{
 .app .dashboard{
   position:relative;
   position:absolute;
+  background:#1b1b1b;
   width:100%;
   height:100%;
 }
@@ -158,7 +195,7 @@ form div label{
 form div input{
     width:100%;
     padding:8px 0;
-    text-indent:5px;
+    text-indent:12px;
     background-color:#333;
     border-radius:3px;
     border:1px solid #555;
@@ -167,7 +204,7 @@ form div input{
 }
 
 form div button{
-    padding:10px;
+    padding:8px;
     background-color:yellow;
     border-radius:3px;
     font-weight:bold;
@@ -180,32 +217,58 @@ button{
 
 
 .welcome{
-  margin-top:40px;
+    display:flex;
+    height:100%;
 }
 
-.welcome .welcome-text{
-  color:yellowgreen;
-  margin:0 auto;
-  width:40%;
-  /* border:1px solid black; */
+.welcome .first{
+   /* border:1px solid white; */
+   padding:80px;
 }
 
-.welcome .welcome-text p{
-    font-size:23px;
+.welcome .first h1{
+    margin-top:80px;
     color:yellowgreen;
+    font-size:50px;
+ }
+
+ .welcome .first div button{
+   padding:15px 80px;
+   background-color:yellow;
+   border-radius:3px;
+   font-weight:bolder;
+ }
+
+.welcome .second{
+    padding:40px;
+    width:50%;
+    /* border:1px solid white; */
+    position: relative;
+}
+
+.welcome .second .img{
+    background-image: url(../Capture.JPG);
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin-top:60px;
+    box-shadow:0 0 10px 10px darkgreen;
+    /* background-position:center center; */
+    width:100%;
+    height:400px;
+    border-radius:10px;
+    /* border:1px solid white; */
+}
+
+#loginInfo{
+    margin:0 auto;
+    border:1px solid #555;
+    width:42%;
     text-align:center;
+    color:white;
+    border-radius:4px;
 }
 
-.welcome .welcome-img-div{
-  width:52%;
-  margin: 15px auto;
-  box-shadow:0px 0px 10px 0px lightgreen;
-  background-image:url(../Capture.JPG);
-  background-size:contain;
-  background-repeat:no-repeat;
-  height:400px;
-  background-position:center center;
+#loginInfo div{
+    border-top:1px solid #555;
 }
-
-
 

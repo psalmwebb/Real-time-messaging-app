@@ -14,9 +14,13 @@ export default function Signup()
     async function handleSubmit(e)
     {
       e.preventDefault()
+
+      e.target.textContent = "Signing Up...";
       let user = await SignupUser(formData)
 
       user.errors  ? setFormErrors(user.errors) : setUser({...user})
+
+      e.target.textContent = "Sign Up";
     }
 
     function handleChange(e)
@@ -25,7 +29,7 @@ export default function Signup()
     }
     
     return (
-        <form onSubmit={handleSubmit}>
+        <form>
             <div>
                 <label>Username</label>
                 <input type="text" name="username" onChange={handleChange}/>
@@ -45,7 +49,7 @@ export default function Signup()
             </div>
 
             <div>
-                <button style={{'width':'100%'}}>Sign Up</button>
+                <button style={{'width':'100%'}} onClick={handleSubmit}>Sign Up</button>
             </div>
         </form>
     )

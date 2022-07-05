@@ -44,6 +44,10 @@ export default withRouter(function Navbar(props)
     
     const defaultData = (
         validURLS.includes(currentURl) ? (<nav>
+            <div>
+              <i className="fa fa-comments"></i>
+              <span>CONVERSELY</span>
+            </div>
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/login">Log in</Link></li>
@@ -54,6 +58,10 @@ export default withRouter(function Navbar(props)
 
     const loggedInUserData = (
         <nav>
+            <div>
+              <i className="fa fa-comments"></i>
+              {/* <span>CONVERSELY</span> */}
+            </div>
             <span>
                   {Object.keys(user).length > 0  ? `Welcome, ${user.email}` : null} 
                   <button onClick={handleLogout} style={buttonStyle}>Log Out</button>

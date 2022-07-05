@@ -48,7 +48,7 @@ app.get("*",(req,res)=>{
 })
 
 
-mongoose.connect(localDbURL,{ useNewUrlParser: true,useUnifiedTopology: true })
+mongoose.connect(remoteDbURL,{ useNewUrlParser: true,useUnifiedTopology: true })
 
 mongoose.connection.on("error",()=> console.log("There was an error"))
 

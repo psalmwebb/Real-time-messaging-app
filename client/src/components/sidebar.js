@@ -18,7 +18,7 @@ export default function Sidebar({setCompToShow}){
     const {compToShow} = useContext(UiContext);
 
     const style = {
-        width:compToShow === "sidebar" ? "100%" : "30%"
+        width:compToShow === "sidebar" ? "100%" : "25%"
     }
 
     return (

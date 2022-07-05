@@ -13,8 +13,8 @@ export default function Chatspace({onClickClose})
     const {compToShow} = useContext(UiContext);
 
     const style = {
-        width: compToShow === "chatspace" ? "100%" : "70%",
-        left:compToShow === "chatspace" ? "0" : "30%"
+        width: compToShow === "chatspace" ? "100%" : "75%",
+        left:compToShow === "chatspace" ? "0" : "25%"
     }
 
     const defaultRes = (

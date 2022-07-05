@@ -15,9 +15,11 @@ export default function Login()
     {
        e.preventDefault()
 
+       e.target.textContent = "Logging In...";
        let user = await LoginUser(formData)
        
        user ? setUser(user) : errorDiv.current.innerHTML ="Invalid Credentials..."
+       e.target.textContent = "Log In";
     }
 
     function handleChange(e)
@@ -26,7 +28,8 @@ export default function Login()
     }
     
     return (
-        <form onSubmit={handleSubmit}>
+        <>
+        <form>
             <div ref={errorDiv} style={{"color":"white","textAlign":"center"}}></div>
             <div>
                 <label>Username</label>
@@ -39,13 +42,28 @@ export default function Login()
             </div>
 
             <div>
-                <button style={{'width':"100%"}}>Log In</button>
-            </div>
-
-            <div>
-                <p style={{'color':'grey','textAlign':'center'}}>Username : james</p>
-                <p style={{'color':'grey','textAlign':'center'}}>Password : james123</p>
+                <button onClick={handleSubmit} style={{'width':"100%"}}>Log In</button>
             </div>
         </form>
+        <div id="loginInfo">
+            <div>
+                <h4>LOGIN CREDENTIALS</h4>
+                <div>
+                  <span>Username :</span>
+                  <span>james</span>
+                  <br/>
+                  <span>Password : </span>
+                  <span>james123</span>
+                </div>
+                <div>
+                  <span>Username :</span>
+                  <span>bean</span>
+                  <br/>
+                  <span>Password : </span>
+                  <span>bean123</span>
+                </div>
+            </div>
+        </div>
+        </>
     )
 }
